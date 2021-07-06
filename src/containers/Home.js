@@ -4,26 +4,20 @@ import { getTodos } from '../store/action';
 import { useEffect } from 'react'
 function Home() {
     let state = useSelector(state => state);
-    let dispatch = useDispatch();
+  
 
-    const update = () => {
-
-        // dispatch({ type: "UPDATEDATA", username: "basit" })
-    }
-
-    useEffect(() => {
-        dispatch(getTodos())
-    }, [])
-    console.log("todos===>", state.todos)
+    console.log("state==>",state)
 
     return (
         <div>
             <h1>Home</h1>
             <h2>{state.username}</h2>
 
-            <button onClick={update}>UPDATE</button>
+            {/* <button onClick={update}>UPDATE</button> */}
 
-            {state.todos.map((v,i)=> <p>{v.title}</p>)}
+            {state.todos ? state.todos.map((v, i) => <p>{v.title}</p>) : <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+            </div>}
         </div>
     );
 }

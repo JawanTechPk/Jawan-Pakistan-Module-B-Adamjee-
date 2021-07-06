@@ -1,24 +1,30 @@
 
-const INTIAL_STATE = {
-    username: "ghous",
-    email: "ghous@gmail.com",
-    todos: []
-}
+// const INTIAL_STATE = {
+//     username: "ghous",
+//     email: "ghous@gmail.com",
+//     todos: undefined
+// }
 
-export default (state = INTIAL_STATE, action) => {
-    switch (action.type) {
-        case "UPDATEDATA":
-            return {
-                ...state,
-                username: action.username
+// export default (state = INTIAL_STATE, action) => {
+//     switch (action.type) {
+//         case "UPDATEDATA":
+//             return {
+//                 ...state,
+//                 username: action.username
 
-            }
-        case "GETTODOS":
-            return {
-                ...state,
-                todos: action.todos
-            }
-        default:
-            return state
-    }
-}
+//             }
+//         case "GETTODOS":
+//             return {
+//                 ...state,
+//                 todos: action.todos
+//             }
+//         default:
+//             return state
+//     }
+// }
+
+
+
+
+
+

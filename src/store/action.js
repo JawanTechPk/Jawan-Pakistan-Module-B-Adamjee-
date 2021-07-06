@@ -1,12 +1,16 @@
 
-const getDatas = () => {
+const getTodos = () => {
     return (dispatch) => {
         fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
-            .then(json => dispatch({ type: "GETTODOS", todos: json }))
+            .then(json => {
+                setTimeout(()=>{
+                    dispatch({ type: "GETTODOS", todos: json })
+                },3000)
+            })
     }
 }
 
 export {
-    getData
+    getTodos
 }
